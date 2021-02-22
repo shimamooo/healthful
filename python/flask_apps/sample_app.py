@@ -3,4 +3,4 @@ app = Flask(__name__);
 
 @app.route('/sample')
 def running():
-  return 'Flask is running!'
+  return '<h1>Flask is running!</h1>'
