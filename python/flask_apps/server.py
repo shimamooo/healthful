@@ -6,6 +6,7 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 @app.route('/hello', methods=['POST'])
 @cross_origin()

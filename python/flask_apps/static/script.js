@@ -4,15 +4,8 @@ const greeting = document.querySelector('#greeting');
 
 nameButton.addEventListener('click', () => {
   let message = {
-    name: 'my dick is throbbing',
+    name: nameInput.value,
   };
-  // fetch('http://127.0.0.1:5000/hello', {
-  //   headers: { 'content-type': '' },
-  //   body: JSON.stringify(message),
-  //   method: 'POST',
-  // })
-  //   .then((res) => console.log(res))
-  //   .catch((error) => console.log(error));
   fetch('http://127.0.0.1:5000/hello', {
     method: 'POST',
     headers: {
@@ -21,6 +14,8 @@ nameButton.addEventListener('click', () => {
     body: JSON.stringify(message),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      greeting.textContent = data.greeting;
+    })
     .catch((error) => console.log(error));
 });
