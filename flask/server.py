@@ -1,19 +1,26 @@
-from flask import request
-from flask import jsonify
-from flask import Flask
+from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
-@app.route('/hello', methods=['POST'])
-@cross_origin()
-def hello():
-  message = request.get_json(force=True)
-  name = message['name']
+# @app.route('/hello', methods=['POST'])
+# @cross_origin()
+# def hello():
+#   message = request.get_json(force=True)
+#   name = message['name']
+#   response = {
+#     'greeting': 'Hello, ' + name + '!'
+#   }
+#   return jsonify(response)
+
+@app.route('/')
+def server():
   response = {
-    'greeting': 'Hello, ' + name + '!'
+    'response': 'Hello, world!'
   }
   return jsonify(response)
+
+if __name__ == "__main__":
+  app.run()
