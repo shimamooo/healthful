@@ -29,10 +29,7 @@ export default function Home() {
             <span className='block'>Find the recipe for you,</span>
             <span className='block'>powered by machine learning.</span>
           </h1>
-          <a
-            href='#'
-            className='inline-block mt-8 text-gray-300 font-bold text-sm'
-          >
+          <a href='#' className='inline-block mt-8 text-gray-300 font-bold'>
             See how
           </a>
         </div>
