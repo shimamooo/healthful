@@ -21,17 +21,25 @@ export default function Home() {
           layout='fill'
           objectFit='cover'
           quality={100}
-          className='-z-10 backdrop-filter'
+          className='-z-10'
         />
         <Navbar />
-        <div className='absolute bottom-12 left-24'>
-          <h1 className='font-serif text-gray-50 text-4xl leading-tight'>
-            <span className='block'>Find the recipe for you,</span>
-            <span className='block'>powered by machine learning.</span>
-          </h1>
-          <a href='#' className='inline-block mt-8 text-gray-300 font-bold'>
-            See how
+        <div className='absolute bottom-8 flex w-full items-end px-12'>
+          <a
+            href='/contributors'
+            className='flex-1 mb-4 font-bold text-gray-400'
+          >
+            See the contributors
           </a>
+          <div className='flex-1'>
+            <h1 className='font-serif text-white text-4xl leading-tight'>
+              <span className='block'>Curated Recipes,</span>
+              <span className='block'>Using Machine Learning</span>
+            </h1>
+            <a href='#' className='inline-block mt-8 font-bold text-gray-400'>
+              See how
+            </a>
+          </div>
         </div>
       </main>
     </Layout>
