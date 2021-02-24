@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import HamburgerMenu from './HamburgerMenu';
 
 export default function Navbar() {
   return (
@@ -17,8 +18,8 @@ export default function Navbar() {
         </Link>
       </figure>
       <div className='flex-1 flex justify-between items-center font-bold text-gray-400'>
-        <a href='/model'>Model</a>
-        <div className='h-16 w-16 rounded-full bg-gray-400 opacity-50'></div>
+        <a href='/model'>Application</a>
+        <HamburgerMenu />
       </div>
     </nav>
   );

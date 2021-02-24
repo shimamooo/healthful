@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Navbar from '../components/Navbar';
+import Menu from '../components/Menu';
 
 export default function Home() {
   const [content, setContent] = useState();
@@ -14,6 +15,7 @@ export default function Home() {
 
   return (
     <Layout>
+      <Menu />
       <main className='h-screen'>
         <Image
           src='/food.png'

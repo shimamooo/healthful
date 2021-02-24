@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .open {
+    @apply translate-y-0;
+  }
+
+  .bg-menu {
+    background-color: #596460;
+  }
+}
+
 @font-face {
   font-family: 'Ashbury';
   font-style: normal;
