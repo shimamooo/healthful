@@ -24,12 +24,17 @@ export default function Home() {
           className='-z-10 backdrop-filter'
         />
         <Navbar />
-        <div className='absolute bottom-10'>
-          <h1 className='font-serif text-white text-5xl'>Healthful Recipes</h1>
-          <p>
-            Find healthy recipes using the ingredients you have at hand. Powered
-            by machine learning
-          </p>
+        <div className='absolute bottom-12 left-24'>
+          <h1 className='font-serif text-gray-50 text-4xl leading-tight'>
+            <span className='block'>Find the recipe for you,</span>
+            <span className='block'>powered by machine learning.</span>
+          </h1>
+          <a
+            href='#'
+            className='inline-block mt-8 text-gray-300 font-bold text-sm'
+          >
+            See how
+          </a>
         </div>
       </main>
     </Layout>

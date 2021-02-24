@@ -9,6 +9,9 @@ module.exports = {
         sans: ['Inter', ...fontFamily.sans],
         serif: ['Ashbury', ...fontFamily.serif],
       },
+      fontSize: {
+        '4xl': '2.75rem',
+      },
       zIndex: {
         '-10': '-10',
       },
