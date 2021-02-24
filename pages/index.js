@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   const [content, setContent] = useState();
@@ -13,24 +14,24 @@ export default function Home() {
 
   return (
     <Layout>
-      <main className='container mx-auto flex'>
-        <div>
-          <h1 className='font-serif'>Healthy Recipes</h1>
-          <p>
-            Find healthy recipes using the ingredients you have at hand. Powered
-            by machine learning.
-          </p>
-          <a href='#demo'>Get Started</a>
-        </div>
+      <main className='h-screen'>
         <Image
           src='/food.png'
           alt='Food hero image'
-          width={3000}
-          height={2500}
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+          className='-z-10 backdrop-filter'
         />
+        <Navbar />
+        <div className='absolute bottom-10'>
+          <h1 className='font-serif text-white text-5xl'>Healthful Recipes</h1>
+          <p>
+            Find healthy recipes using the ingredients you have at hand. Powered
+            by machine learning
+          </p>
+        </div>
       </main>
-
-      <section></section>
     </Layout>
   );
 }
