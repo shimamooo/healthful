@@ -30,11 +30,15 @@
   }
 
   .bg-menu {
-    background-color: #5c7e97;
+    background-color: #596460;
   }
 
-  .color-menu {
+  .text-menu {
     color: #eae8e3;
+  }
+
+  .text-link {
+    color: #d7d5d6;
   }
 
   .border-menu {
@@ -55,4 +59,26 @@
   font-style: normal;
   font-weight: 100 900;
   src: url('/fonts/inter.woff2') format('woff2');
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+}
+
+.link:after {
+  content: '';
+  position: absolute;
+  transition: all 0.3s;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  opacity: 0;
+  height: 1px;
+  background-color: #cfceca;
+}
+
+.link:hover:after {
+  width: 100%;
+  opacity: 1;
 }

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Navbar from '../components/Navbar';
@@ -23,7 +24,7 @@ export default function Home() {
       <main className='h-screen'>
         <Image
           src='/food.png'
-          alt='Food hero image'
+          alt='Healthful hero image'
           layout='fill'
           objectFit='cover'
           quality={100}
@@ -38,12 +39,29 @@ export default function Home() {
             </h1>
             <a
               href='#showcase'
-              className='inline-block mt-8 font-bold text-gray-400'
+              className='SHOWCASE-LINK mt-8 flex items-center gap-2'
             >
-              See how
+              <p className='SHOWCASE-LINK-TEXT font-bold text-gray-400'>
+                See how
+              </p>
+              <div className='SHOWCASE-LINK-ICON w-14 h-8 border-2 border-gray-600 rounded-full grid place-items-center'>
+                <svg
+                  width='24'
+                  height='24'
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill-rule='evenodd'
+                  clip-rule='evenodd'
+                  className='fill-current text-gray-400'
+                >
+                  <path d='M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z' />
+                </svg>
+              </div>
             </a>
           </div>
-          <a href='/contributors' className='flex-1 font-medium text-gray-400'>
+          <a
+            href='/contributors'
+            className='flex-1 font-medium text-gray-400 hover:text-gray-300 transition duration-200'
+          >
             Meet the team
           </a>
         </div>

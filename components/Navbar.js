@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import HamburgerMenu from './HamburgerMenu';
+import HamburgerMenu from '../components/HamburgerMenu';
 
 export default function Navbar() {
   return (
@@ -17,8 +17,12 @@ export default function Navbar() {
           </a>
         </Link>
       </figure>
-      <div className='flex-1 flex justify-between items-center font-medium text-gray-400'>
-        <a href='/model'>Product</a>
+      <div className='flex-1 flex justify-between items-center '>
+        <Link href='/product'>
+          <a className='z-0 font-medium text-gray-400 hover:text-gray-300 transition duration-200'>
+            Product
+          </a>
+        </Link>
         <HamburgerMenu />
       </div>
     </nav>

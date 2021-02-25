@@ -20,7 +20,7 @@ export default function HamburgerMenu() {
   }, []);
 
   return (
-    <div className='HAMBURGER-MENU cursor-pointer h-14 w-14 rounded-full bg-gray-400 opacity-70 grid place-items-center z-20 hover:opacity-60 transition-opacity duration-300'>
+    <div className='HAMBURGER-MENU fixed right-12 cursor-pointer h-14 w-14 rounded-full bg-gray-400 opacity-70 grid place-items-center z-20 hover:opacity-60 transition-opacity duration-300'>
       <div className='h-5 w-7 grid place-items-center'>
         <div className='LINE-1 h-1 w-full bg-white transform transition-transform duration-300'></div>
         <div className='LINE-2 h-1 w-full bg-white transform transition-transform duration-300'></div>
