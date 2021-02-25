@@ -39,19 +39,29 @@ export default function Home() {
             </h1>
             <a
               href='#showcase'
-              className='SHOWCASE-LINK mt-8 flex items-center gap-2'
+              className='SHOWCASE-LINK mt-8 inline-flex items-center gap-2'
             >
-              <p className='SHOWCASE-LINK-TEXT font-bold text-gray-400'>
+              <p className='SHOWCASE-LINK-TEXT font-bold text-gray-400 transition-colors duration-300'>
                 See how
               </p>
-              <div className='SHOWCASE-LINK-ICON w-14 h-8 border-2 border-gray-600 rounded-full grid place-items-center'>
+              <div className='SHOWCASE-LINK-ICON w-14 h-7 border-2 border-gray-600 rounded-full transition duration-300 text-gray-300'>
                 <svg
                   width='24'
                   height='24'
                   xmlns='http://www.w3.org/2000/svg'
                   fill-rule='evenodd'
                   clip-rule='evenodd'
-                  className='fill-current text-gray-400'
+                  className='SHOWCASE-LINK-ARROW-1 fill-current'
+                >
+                  <path d='M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z' />
+                </svg>
+                <svg
+                  width='24'
+                  height='24'
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill-rule='evenodd'
+                  clip-rule='evenodd'
+                  className='SHOWCASE-LINK-ARROW-2 fill-current'
                 >
                   <path d='M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z' />
                 </svg>
@@ -60,7 +70,7 @@ export default function Home() {
           </div>
           <a
             href='/contributors'
-            className='flex-1 font-medium text-gray-400 hover:text-gray-300 transition duration-200'
+            className='flex-1 font-medium text-gray-500 hover:text-gray-400 transition duration-200'
           >
             Meet the team
           </a>

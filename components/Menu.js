@@ -8,22 +8,22 @@ export default function Menu() {
         <ul className='font-serif space-y-8 text-4xl text-menu'>
           <li className='border-menu'>
             <Link href='/product'>
-              <a className='link'>Product</a>
+              <a className='MENU-LINK'>Product</a>
             </Link>
           </li>
           <li className='border-menu'>
             <Link href='/saved-recipes'>
-              <a className='link'>Saved Recipes</a>
+              <a className='MENU-LINK'>Saved Recipes</a>
             </Link>
           </li>
           <li className='border-menu'>
             <Link href='/community'>
-              <a className='link'>Community</a>
+              <a className='MENU-LINK'>Community</a>
             </Link>
           </li>
           <li className='border-menu'>
             <Link href='/about'>
-              <a className='link'>About</a>
+              <a className='MENU-LINK'>About</a>
             </Link>
           </li>
         </ul>
@@ -31,21 +31,21 @@ export default function Menu() {
           <ul className='flex-1 space-y-2'>
             <li>
               <Link href='/team'>
-                <a className='hover:text-gray-400 transition duration-300'>
+                <a className='hover:text-gray-200 transition duration-300'>
                   Team
                 </a>
               </Link>
             </li>
             <li>
               <Link href='/contact'>
-                <a className='hover:text-gray-400 transition duration-300'>
+                <a className='hover:text-gray-200 transition duration-300'>
                   Contact
                 </a>
               </Link>
             </li>
             <li>
               <Link href='/technology'>
-                <a className='hover:text-gray-400 transition duration-300'>
+                <a className='hover:text-gray-200 transition duration-300'>
                   Technology
                 </a>
               </Link>
@@ -55,7 +55,7 @@ export default function Menu() {
             <li>
               <a
                 href=''
-                className='hover:text-gray-400 transition duration-300'
+                className='hover:text-gray-200 transition duration-300'
               >
                 Facebook
               </a>
@@ -63,7 +63,7 @@ export default function Menu() {
             <li>
               <a
                 href=''
-                className='hover:text-gray-400 transition duration-300'
+                className='hover:text-gray-200 transition duration-300'
               >
                 Instagram
               </a>

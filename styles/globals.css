@@ -61,12 +61,12 @@
   src: url('/fonts/inter.woff2') format('woff2');
 }
 
-.link {
+.MENU-LINK {
   position: relative;
   display: inline-block;
 }
 
-.link:after {
+.MENU-LINK:after {
   content: '';
   position: absolute;
   transition: all 0.3s;
@@ -78,7 +78,39 @@
   background-color: #cfceca;
 }
 
-.link:hover:after {
+.MENU-LINK:hover:after {
   width: 100%;
   opacity: 1;
+}
+
+.SHOWCASE-LINK-ARROW-1 {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.SHOWCASE-LINK-ARROW-2 {
+  position: absolute;
+  opacity: 1;
+  transform: translateX(14px);
+  transition: all 0.3s ease-in-out;
+}
+
+.SHOWCASE-LINK:hover .SHOWCASE-LINK-TEXT {
+  @apply text-gray-300;
+}
+
+.SHOWCASE-LINK:hover .SHOWCASE-LINK-ICON {
+  @apply border-gray-500;
+}
+
+.SHOWCASE-LINK:hover .SHOWCASE-LINK-ARROW-1 {
+  transform: translateX(14px);
+  opacity: 1;
+}
+
+.SHOWCASE-LINK:hover .SHOWCASE-LINK-ARROW-2 {
+  transform: translateX(38px);
+  opacity: 0;
 }
