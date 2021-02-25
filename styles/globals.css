@@ -2,13 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-100;
+  }
+}
+
 @layer utilities {
+  .container-homepage {
+    max-width: 1080px;
+  }
+
   .open {
     @apply translate-y-0;
   }
 
+  .collapse-1 {
+    transform: translateY(5px);
+  }
+
+  .collapse-2 {
+    transform: translateY(-5px);
+  }
+
   .bg-menu {
-    background-color: #596460;
+    background-color: #5c7e97;
+  }
+
+  .color-menu {
+    color: #eae8e3;
+  }
+
+  .border-menu {
+    border-bottom: 1px solid rgba(237, 236, 233, 0.1);
+    @apply pb-7;
   }
 }
 

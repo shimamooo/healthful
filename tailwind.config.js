@@ -12,8 +12,12 @@ module.exports = {
       fontSize: {
         '4xl': '2.75rem',
       },
+      spacing: {
+        128: '48rem',
+      },
       zIndex: {
         '-10': '-10',
+        '-20': '-20',
       },
     },
   },

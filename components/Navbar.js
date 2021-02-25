@@ -4,7 +4,7 @@ import HamburgerMenu from './HamburgerMenu';
 
 export default function Navbar() {
   return (
-    <nav className='flex px-12 py-4'>
+    <nav className='flex px-12 py-6'>
       <figure className='flex-1'>
         <Link href='/'>
           <a>
@@ -17,8 +17,8 @@ export default function Navbar() {
           </a>
         </Link>
       </figure>
-      <div className='flex-1 flex justify-between items-center font-bold text-gray-400'>
-        <a href='/model'>Application</a>
+      <div className='flex-1 flex justify-between items-center font-medium text-gray-400'>
+        <a href='/model'>Product</a>
         <HamburgerMenu />
       </div>
     </nav>
