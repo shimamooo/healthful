@@ -9,7 +9,7 @@ export default function Product() {
 
     submitButton.addEventListener('click', () => {
       let message = {
-        name: textInput.value,
+        name: textInput.value.toLowerCase(),
       };
       fetch('http://localhost:5000/form', {
         method: 'POST',
@@ -19,14 +19,15 @@ export default function Product() {
         body: JSON.stringify(message),
       })
         .then((response) => response.json())
-        .then((data) => setContent(data.greeting))
+        .then((data) => console.log(data))
         .catch((error) => console.log(error));
     });
   }, []);
 
   return (
     <main>
-      <input type='text' className='TEXT-INPUT' />
+      <label htmlFor='fruit'>Choose a fruit</label>
+      <input type='text' id='fruit' className='TEXT-INPUT' />
       <button className='SUBMIT-BUTTON'>Submit</button>
       <p className='TEXT-CONTENT'>{content}</p>
     </main>
