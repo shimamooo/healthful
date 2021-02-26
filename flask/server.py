@@ -5,20 +5,12 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-# @app.route('/hello', methods=['POST'])
-# @cross_origin()
-# def hello():
-#   message = request.get_json(force=True)
-#   name = message['name']
-#   response = {
-#     'greeting': 'Hello, ' + name + '!'
-#   }
-#   return jsonify(response)
-
-@app.route('/')
+@app.route('/form', methods=['POST'])
 def server():
+  message = request.get_json(force=True)
+  name = message['name']
   response = {
-    'response': 'Hello, world!'
+    'greeting': 'Hello ' + name
   }
   return jsonify(response)
 

@@ -6,14 +6,6 @@ import Navbar from '../components/Navbar';
 import Menu from '../components/Menu';
 
 export default function Home() {
-  const [content, setContent] = useState();
-
-  useEffect(() => {
-    fetch('http://localhost:5000/')
-      .then((response) => response.json())
-      .then((data) => setContent(data.response));
-  }, []);
-
   return (
     <Layout>
       <div className='fixed bg-gray-50 w-128 h-128 top-1/2 left-1/2 transform translate-x-1/3 -translate-y-2/3 rounded-full -z-20'></div>

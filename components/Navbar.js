@@ -19,7 +19,7 @@ export default function Navbar() {
       </figure>
       <div className='flex-1 flex justify-between items-center '>
         <Link href='/product'>
-          <a className='z-0 font-medium text-gray-500 hover:text-gray-400 transition duration-200'>
+          <a className='z-0 font-medium text-gray-400 hover:text-gray-300 transition duration-200'>
             Product
           </a>
         </Link>
