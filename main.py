@@ -4,19 +4,20 @@ import requests
 import random
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"
-veg = ['cucumber', 'carrot', 'capsicum', 'onion', 'potato', 'tomato', 'beetroot', 'cabbage', 'lettuce', 'spinach', 'cauliflower', 'turnip', 'corn', 'sweetcorn', 'sweet_potato', 'paprika', 'ginger', 'garlic', 'pea',]
-fruits = ['banana', 'apple', 'pear', 'grapes', 'orange', 'kiwi', 'watermelon', 'pomegranate', 'pineapple', 'mango']
+veg_fruit = ['cucumber', 'carrot', 'capsicum', 'onion', 'potato', 'tomato', 'beetroot', 'cabbage', 'lettuce', 'spinach', 'cauliflower', 'turnip', 'corn', 'sweetcorn', 'sweet_potato', 'paprika', 'ginger', 'garlic', 'pea', 'banana', 'apple', 'pear', 'grapes', 'orange', 'kiwi', 'watermelon', 'pomegranate', 'pineapple', 'mango']
+
 choice = input('Choose a vegetable/fruit:').lower()
 
 
-if choice in veg:
-    bbc_url = 'https://www.bbc.co.uk/food/' + choice
-else:
-    choice = input('Choose a vegetable:').lower
-if choice in fruits:
-    bbc_url = 'https://www.bbc.co.uk/food/' + choice
-else:
-    choice = input('Choose a vegetable:').lower
+flag = True
+while flag:
+    if choice in veg_fruit:
+        bbc_url = 'https://www.bbc.co.uk/food/' + choice
+        flag = False
+    else:
+        choice = input('That vegetable/fruit is not recognize, please enter another one:').lower
+
+
 driver = webdriver.Chrome(PATH)
 req = requests.get(bbc_url).text
 soup = BeautifulSoup(req, 'lxml')
@@ -33,8 +34,6 @@ final_url = url_list[random.randint(0, len(url_list))]
 driver.get(final_url)
 
 div = driver.find_element_by_class_name('recipe-ingredients-wrapper')
-print(div.text)
-div = driver.find_element_by_class_name('gel-layout')
 print(div.text)
 div2 = driver.find_element_by_class_name('recipe-method-wrapper')
 print('\n')
