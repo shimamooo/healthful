@@ -33,4 +33,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-flask/VGG16_cats_and_dogs.h5
+backend/VGG16_cats_and_dogs.h5
+venv
