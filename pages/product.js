@@ -61,7 +61,7 @@ export default function Product() {
       </label>
       <input type='text' id='food' className='TEXT-INPUT' />
       <button className='SUBMIT-BUTTON'>Submit</button>
-      <p className='TEXT-CONTENT'>{content}</p>
+      <p className='TEXT-CONTENT'>CONTENT-STATE</p>
     </main>
   );
 }
