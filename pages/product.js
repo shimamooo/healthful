@@ -1,43 +1,43 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Product() {
+  const [content, setContent] = useState();
+
   useEffect(() => {
-    // const fileInput = document.querySelector('.FILE-INPUT');
-    // const selectedImage = document.querySelector('.SELECTED-IMAGE');
-    // const predictButton = document.querySelector('.PREDICT-BUTTON');
-    // const dogPrediction = document.querySelector('.DOG-PREDICTION');
-    // const catPrediction = document.querySelector('.CAT-PREDICTION');
-    // let base64Image;
+    const fileInput = document.querySelector('.FILE-INPUT');
+    const selectedImage = document.querySelector('.SELECTED-IMAGE');
+    const predictButton = document.querySelector('.PREDICT-BUTTON');
+    const dogPrediction = document.querySelector('.DOG-PREDICTION');
+    const catPrediction = document.querySelector('.CAT-PREDICTION');
+    let base64Image;
 
-    // fileInput.addEventListener('change', () => {
-    //   let reader = new FileReader();
-    //   console.log(reader);
-    //   reader.onload = () => {
-    //     let dataURL = reader.result;
-    //     console.log(dataURL);
-    //   };
-    // });
+    fileInput.addEventListener('change', () => {
+      let reader = new FileReader();
+      console.log(reader);
+      reader.onload = () => {
+        let dataURL = reader.result;
+        console.log(dataURL);
+      };
+    });
 
-    // const textInput = document.querySelector('.TEXT-INPUT');
-    // const submitButton = document.querySelector('.SUBMIT-BUTTON');
+    const textInput = document.querySelector('.TEXT-INPUT');
+    const submitButton = document.querySelector('.SUBMIT-BUTTON');
 
-    console.log('Im gay');
-
-    // submitButton.addEventListener('click', () => {
-    //   let message = {
-    //     name: textInput.value.toLowerCase(),
-    //   };
-    //   fetch('/', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(message),
-    //   })
-    //     .then((response) => response.json())
-    //     .then((data) => console.log(data))
-    //     .catch((error) => console.log(error));
-    // });
+    submitButton.addEventListener('click', () => {
+      let message = {
+        name: textInput.value.toLowerCase(),
+      };
+      fetch('http://localhost:5000/form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(message),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error));
+    });
   }, []);
 
   return (
@@ -61,7 +61,7 @@ export default function Product() {
       </label>
       <input type='text' id='food' className='TEXT-INPUT' />
       <button className='SUBMIT-BUTTON'>Submit</button>
-      <p className='TEXT-CONTENT'>CONTENT-STATE</p>
+      <p className='TEXT-CONTENT'>{content}</p>
     </main>
   );
 }
